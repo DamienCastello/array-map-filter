@@ -60,9 +60,61 @@ En sortie:
  */
 
 function getMoviesFreshness(movies) {
+return movies.map(
+    movie => {
+      //console.log(movie)
+      if (movie.rating < 60) {
+        return {...movie, label: 'rotten'}
+
+      } else if ((movie.rating >= 60) && (movie.rating <= 75)) {
+        return {...movie, label: 'fresh'}
+
+      } else {
+        return {...movie, label: 'certified fresh'}
+
+      }
+      
+    }
+  )
+
 }
 
+console.log(getMoviesFreshness([
+  {
+    name: 'Crazy Rich Asians',
+    rating: 93
+  },
+  {
+    name: 'Skyscraper',
+    rating: 46
+  },
+  {
+    name: 'Leave No Trace',
+    rating: 100
+  },
+  {
+    name: 'White Boy Rick',
+    rating: 60
+  }
+]));
 
+/*
+function getMoviesFreshness(movies) {
+  const array = movies.map(
+    movie => {
+       if (movie['rating']<60){
+        movie ['label']= 'rotten'
+     console.log(movie['rating'])
+       } else if ((movie['rating']>=60)&&(movie.rating<=75)){
+        movie ['label']= 'fresh'
+        
+          } else {
+            movie ['label']= 'certified fresh'
+        }}
+            )
+            return array;
+  }
+*/
 
 // Ne pas modifier l'export
 module.exports = getMoviesFreshness;

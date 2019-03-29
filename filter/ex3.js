@@ -23,8 +23,52 @@ Sortie attendue:
 
  */
 
-function keepStarks(names) {
-}
+const name = [
+  'Bran Stark',
+  'Cersei Lannister',
+  'Sandor Clegane',
+  'Arya Stark',
+  'Yara Greyjoy',
+  'Sansa Stark'
+];
+
+
+  /*const keepStark = (names) => {
+    return names.filter(function (name) {
+      return name.endsWith('Stark')
+    })}*/
+
+
+  const keepStarks = (names) => {
+    return names.filter(function (name) {
+      return name.endsWith('Stark')
+    })}
+    
+
+/*
+    function keepStarks(names){
+      return names.filter(starkOnly => starkOnly.endsWith('Stark'))
+    }
+    */
+    
+
+    console.log(keepStarks([
+      'Bran Stark',
+      'Cersei Lannister',
+      'Sandor Clegane',
+      'Arya Stark',
+      'Yara Greyjoy',
+      'Sansa Stark'
+    ]))
+
+  /*console.log(keepStark([
+    'Bran Stark',
+    'Cersei Lannister',
+    'Sandor Clegane',
+    'Arya Stark',
+    'Yara Greyjoy',
+    'Sansa Stark'
+  ]))*/
 
 // Ne pas modifier l'export
 module.exports = keepStarks;
